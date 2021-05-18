@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>biz box</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #c9b18d;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            background: #e9eae2;
+            display: grid;
+            grid-template-columns: 1fr 250px;
+            grid-template-rows: 150px 1fr 1fr;
+            grid-template-areas:
+                'header header'
+                'main nav'
+                'main aside';
+            margin: 20px 40px;
+        }
+
+        #container p {
+            color: #794933;
+        }
+
+        header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #a89c8e;
+            margin: 10px;
+        }
+
+        header>div {
+            padding: 10px;
+        }
+
+        header>div img {
+            width: 160px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #794933;
+            margin: 20px;
+        }
+
+        nav {
+            grid-area: nav;
+        }
+
+        main {
+            display: inline-block;
+            grid-area: main;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        main h2 {
+            color: #794933;
+        }
+
+        main img {
+            margin: 0;
+            padding: 0;
+            width: 30%;
+        }
+        main p {
+            vertical-align: top;
+        }
+
+        .imagBiz {
+            display: flex;
+        }
+
+        .span1,
+        .span2 {
+            color: black;
+            font-weight: bold;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="logo"><img src="img/logo.png" alt=""></div>
+            <p>Free CSS Template</p>
+        </header>
+        <nav>
+            <ul>
+                <li class="lista">HOME</li>
+                <li class="lista">PRODUCTS</li>
+                <li class="lista">SERVICES</li>
+                <li class="lista">ABOUT US</li>
+                <li class="lista">CONTACT US</li>
+            </ul>
+        </nav>
+        <main class="main-content">
+            <h2>Welcome to Stename.com!</h2> <br>
+            <p> BIZBOX is a fre template from <span class="span1">lorem ipsum,</span> dolor sit amet consectetur
+                adipisicing <span class="span2"> Tenetur, dignissimos </span> quas velit obcaecati vel cum culpa
+                possimus sint, quam, quod delectus deleniti non sunt dolor molestiae nulla incidunt eius voluptates!</p>
+
+            <p> <img src="img/bizbox.png" alt="biz-boz imagem" title="biz-box"> Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Sit eos eius nostrum maxime facere
+                praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
+                maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
+                voluptates sequi, accusamus maxime. Porro aliquam eius quae dolorem dolores. Iure culpa fuga
+                non laboriosam quisquam, aliquid suscipit et. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque. sit amet, consectetur adipisicing elit. Sit eos eius nostrum maxime facere
+                praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
+                maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
+                voluptates sequi, accusamus maxime. Porro aliquam eius quae dolorem dolores. Iure culpa fuga
+                non laboriosam quisquam, aliquid suscipit et. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque. sit amet, consectetur adipisicing elit. Sit eos eius nostrum maxime facere
+                praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
+                maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
+                voluptates sequi, accusamus maxime. Porro aliquam eius quae dolorem dolores. Iure culpa fuga
+                non laboriosam quisquam, aliquid suscipit et. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque.</p>
+            <div class="little-list">
+                <ul>
+                    <li> Suspendisse quis gravida massa felis.</li>
+                    <li> Vivamus sagittis bibendu erat.</li>
+                    <li> Nullam et orci in erat viverra ornare.</li>
+                    <li> Suspendisse quis gravida massa felis.</li>
+                    <li> Curabitur malesuada turpis nec ante.</li>
+                </ul>
+            </div>
+            <p>adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque. sit amet, consectetur adipisicing elit. Sit eos eius nostrum maxime facere
+                praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
+                maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
+                voluptates sequi, accusamus maxime. Porro aliquam eius quae dolorem dolores. Iure culpa fuga
+                non laboriosam quisquam, aliquid suscipit et. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque. sit amet, consectetur adipisicing elit. Sit eos eius nostrum maxime facere
+                praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
+                maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
+                voluptates sequi, accusamus maxime. Porro aliquam eius quae dolorem dolores. Iure culpa fuga
+                non laboriosam quisquam, aliquid suscipit et. Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Dignissimos, sapiente? Odio labore dicta nostrum error. Cupiditate, odio
+                assumenda! Culpa ab eos ipsam enim iure. Culpa magnam natus iste officia hic?Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ipsa nesciunt libero earum. Saepe porro vero,
+                enim voluptates quas, sit, ex dolore in nesciunt ab quaerat doloremque quis perspiciatis
+                delectus cumque.</p>
+        </main>
+        <aside>
+            <h3>Recent Updates</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque quis, ullam, ratione nobis
+                reprehenderit repellat magnam odio id, minima quia quo odit optio perspiciatis eligendi explicabo ab
+                officiis porro!</p> <br><br>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsa cum laboriosam accusamus
+                voluptatum et veritatis voluptates blanditiis adipisci est, temporibus similique aliquam corporis,
+                accusantium sequi repudiandae! Et, labore inventore.</p>
+        </aside>
+    </div>
+</body>
+
+</html>
