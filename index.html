@@ -19,13 +19,14 @@
         }
 
         #container {
-            background: #e9eae2;
+            background: #a89c8e;
             display: grid;
             grid-template-columns: 1fr 250px;
-            grid-template-rows: 150px 1fr 1fr;
+            grid-template-rows: 150px 1fr 1fr 1fr;
             grid-template-areas:
                 'header header'
                 'main nav'
+                'main aside'
                 'main aside';
             margin: 20px 40px;
         }
@@ -40,7 +41,10 @@
             justify-content: space-between;
             align-items: center;
             background: #a89c8e;
-            margin: 10px;
+            margin: 0px;
+            border-top: #fff 10px solid;
+            border-left: #fff 10px solid;
+            border-right: #fff 10px solid;
         }
 
         header>div {
@@ -60,14 +64,51 @@
 
         nav {
             grid-area: nav;
-            background: #794933;
+            background: #e9eae2;
+            padding: 0;
+            margin-right: 10px;
+            border-right: #e9eae2 10px solid;
+            border-top: #e9eae2 30px solid;
+            border-bottom: #e9eae2 10px solid;
+
+        }
+
+        nav ul li {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            list-style: none;
+            border-bottom: #6d422d 1px solid;
+            align-items: center;
+            font-size: bold;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        nav ul li:hover {
+            background: #91867a;
+        }
+
+        .selected {
+            background: #8d624c;
+            color: #555;
+        }
+
+        nav ul {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            background: #a89c8e;
         }
 
         main {
             display: inline-block;
             grid-area: main;
             padding: 20px;
-            margin: 20px;
+            background: #e9eae2;
+            border-left: #a89c8e 10px solid;
+            border-bottom: #a89c8e 10px solid;
         }
 
         main h2 {
@@ -79,6 +120,7 @@
             padding: 0;
             width: 30%;
         }
+
         main p {
             vertical-align: top;
         }
@@ -95,6 +137,61 @@
 
         aside {
             grid-area: aside;
+            background: #e9eae2;
+            border-bottom: #a89c8e 10px solid;
+            margin-right: 10px;
+            padding-right: 10px;
+        }
+
+        aside h3 {
+            color: #794933;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        aside a {
+            color: #000;
+        }
+
+        @media (max-width: 800px) {
+            #container {
+                display: grid;
+                grid-template-columns: 1fr 250px;
+                grid-template-rows: 150px 80px 1fr 1fr;
+                grid-template-areas:
+                    'header header'
+                    'nav nav'
+                    'main aside'
+                    'main aside';
+            }
+
+            nav ul {
+                margin: 0;
+                display: flex;
+            }
+
+            nav {
+                margin: 0 10px 0 10px;
+                border-top: #e9eae2 1px solid;
+                border-left: #e9eae2 1px solid;
+                border-right: #e9eae2 1px solid;
+            }
+        }
+        @media (max-width: 712px) {
+            #container {
+                display: grid;
+                grid-template-columns: 1fr 250px;
+                grid-template-rows: 150px 80px 1fr 1fr;
+                grid-template-areas:
+                    'header header'
+                    'main aside'
+                    'main aside'
+                    'main aside';
+            }
+            nav {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -107,11 +204,21 @@
         </header>
         <nav>
             <ul>
-                <li class="lista">HOME</li>
-                <li class="lista">PRODUCTS</li>
-                <li class="lista">SERVICES</li>
-                <li class="lista">ABOUT US</li>
-                <li class="lista">CONTACT US</li>
+                <a href="#">
+                    <li class="lista">HOME</li>
+                </a>
+                <a href="#">
+                    <li class="lista">PRODUCTS</li>
+                </a>
+                <a href="#">
+                    <li class="lista">SERVICES</li>
+                </a>
+                <a href="#">
+                    <li class="lista">ABOUT US</li>
+                </a>
+                <a href="#">
+                    <li class="lista">CONTACT US</li>
+                </a>
             </ul>
         </nav>
         <main class="main-content">
@@ -120,7 +227,8 @@
                 adipisicing <span class="span2"> Tenetur, dignissimos </span> quas velit obcaecati vel cum culpa
                 possimus sint, quam, quod delectus deleniti non sunt dolor molestiae nulla incidunt eius voluptates!</p>
 
-            <p> <img src="img/bizbox.png" alt="biz-boz imagem" title="biz-box"> Lorem ipsum dolor sit amet, consectetur
+            <p> <img src="img/bizbox.png" alt="biz-boz imagem" title="biz-box" align=left> Lorem ipsum dolor sit amet,
+                consectetur
                 adipisicing elit. Sit eos eius nostrum maxime facere
                 praesentium autem vel, tempore officia. Distinctio, rem nemo ratione corporis eius odit quam
                 maiores ad quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe aut dicta
@@ -186,12 +294,17 @@
             <h3>Recent Updates</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus atque quis, ullam, ratione nobis
                 reprehenderit repellat magnam odio id, minima quia quo odit optio perspiciatis eligendi explicabo ab
-                officiis porro!</p> <br><br>
+                officiis porro! <a class="more" href="#more"><strong>More..</strong></a> </p> <br><br>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsa cum laboriosam accusamus
                 voluptatum et veritatis voluptates blanditiis adipisci est, temporibus similique aliquam corporis,
-                accusantium sequi repudiandae! Et, labore inventore.</p>
+                accusantium sequi repudiandae! Et, labore inventore <a class="more" href="#more"><strong>More..</strong></a> .</p>
         </aside>
     </div>
+    <script>
+        const items = document.querySelectorAll('.lista').forEach(a => a.classList)
+        items.addEventListening('click',)
+
+    </script>
 </body>
 
 </html>
